@@ -4,9 +4,7 @@
 
 enum Action {
   C,
-  D,
-  U, // undetermined
-  W  // wild-card
+  D
 };
 
 char A2C(Action act);
