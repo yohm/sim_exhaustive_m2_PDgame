@@ -10,4 +10,4 @@ include_directories(SYSTEM ${MPI_INCLUDE_PATH} /usr/local/include/eigen3)
 
 add_executable(test_Strategy test_Strategy.cpp ${SOURCE_FILES})
 add_executable(test_DirectedGraph test_DirectedGraph.cpp ${SOURCE_FILES})
-
+add_executable(main_check_all main_check_all.cpp ${SOURCE_FILES})

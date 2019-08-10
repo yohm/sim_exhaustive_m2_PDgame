@@ -39,7 +39,7 @@ std::string Strategy::ToString() const {
 
 inline int8_t MIN(int8_t a, int8_t b) { return (a<b)?a:b; }
 
-bool Strategy::IsDefensible() {
+bool Strategy::IsDefensible() const {
   const size_t N = 16;
 
   int8_t d[N][N] = {0};

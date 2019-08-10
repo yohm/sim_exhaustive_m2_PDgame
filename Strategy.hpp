@@ -117,7 +117,7 @@ public:
 
   Action ActionAt( const State& s ) const { return actions[s.ID()]; }
   void SetAction( const State& s, Action a ) { actions[s.ID()] = a; }
-  bool IsDefensible();  // check defensibility.
+  bool IsDefensible() const;  // check defensibility.
   std::array<double,16> StationaryState(double e=0.00001, const Strategy* coplayer = NULL) const;
   bool IsEfficient(double e=0.00001, double th=0.95) const {
     return (StationaryState(e)[0]>th);
