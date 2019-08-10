@@ -37,6 +37,14 @@ std::string Strategy::ToString() const {
   return std::string(c);
 }
 
+uint32_t Strategy::ID() const {
+  uint32_t ans = 0;
+  for(int i=0; i<16; i++) {
+    if(actions[i] == D) { ans += (1<<i); }
+  }
+  return ans;
+}
+
 inline int8_t MIN(int8_t a, int8_t b) { return (a<b)?a:b; }
 
 bool Strategy::IsDefensible() const {

@@ -126,9 +126,18 @@ class Strategy
     @strategy.join('')
   end
 
+  def to_i
+    ans = 0
+    State::ALL_STATES.size.times do |idx|
+      i = (@strategy[idx] == :c ? 0 : 1)
+      ans += (i << idx)
+    end
+    ans
+  end
+
   def inspect
     sio = StringIO.new
-    sio.puts to_s
+    sio.puts "#{to_s} #{to_i}"
     State::ALL_STATES.each_with_index do |stat,idx|
       sio.print "#{@strategy[idx]}|#{stat.map(&:to_s).join}\t"
       sio.print "\n" if idx % 8 == 7

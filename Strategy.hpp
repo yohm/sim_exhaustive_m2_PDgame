@@ -109,6 +109,7 @@ public:
   std::array<Action,16> actions;
 
   std::string ToString() const;
+  uint32_t ID() const;
   friend std::ostream &operator<<(std::ostream &os, const Strategy &strategy);
   bool operator==(const Strategy & rhs) const {
     for(size_t i=0; i<actions.size(); i++) { if(actions[i] != rhs.actions[i]) return false; }

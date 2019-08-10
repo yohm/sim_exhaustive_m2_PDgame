@@ -33,7 +33,7 @@ int main(int argc, char* argv[]) {
       if( dis != s.IsDistinguishableTopo() ) { throw "must not happen"; }
       if(!dis) { continue; }
     }
-    std::cout << s.ToString() << std::endl;
+    std::cout << s.ToString() << ' ' << s.ID() << std::endl;
     num_passed++;
   }
 

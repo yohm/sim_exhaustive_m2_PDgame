@@ -53,6 +53,7 @@ void test_Strategy() {
 
   {
     Strategy alld("dddddddddddddddd");
+    assert( alld.ID() == 65535 );
     assert( alld.IsDefensible() == true );
     assert( alld.IsEfficient() == false );
     assert( alld.IsEfficientTopo() == false );
@@ -68,6 +69,7 @@ void test_Strategy() {
   }
   {
     Strategy allc("cccccccccccccccc");
+    assert( allc.ID() == 0 );
     assert( allc.IsDefensible() == false );
     assert( allc.IsEfficient() == true );
     assert( allc.IsEfficientTopo() == true );
